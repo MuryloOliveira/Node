@@ -10,6 +10,8 @@ app.use(express.urlencoded({
 
 app.use(express.json())
 
+app.use(express.static('public'))
+
 app.post('/users/save', (req, res) => {
     const nome = req.body.nome
     const idade = req.body.idade
